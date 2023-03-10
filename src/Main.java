@@ -1,19 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-    int balance = 100;
-    int bonus = 11;
+        int balance = 100;
+        int bonus = 0;
+        int amountDeposit = 1100;
 
-    int pop = 300 + balance;
-    int popoln = 1100 + balance + bonus;
-        System.out.println((pop) + " Баланс при поплнение менее 1000 рублей");
-        System.out.println((popoln) + " Баланс при пополнении от 1000 рублей");
-        // Объявляете переменные для входных данных и
-        // параметров программы: начального счёта,
-        // суммы пополнения и тп
-
-        // Условным оператором проверяете, превысила ли
-        // сумма пополнения порог, и для этих двух разных
-        // сценариев рассчитываете сумму бонуса и выводите
-        // на экран.
+        if (amountDeposit > 1000) {
+            bonus = amountDeposit / 100;
+        } else if (amountDeposit < 1000) {
+            bonus = 0;
+        }
+        System.out.println((balance + amountDeposit + bonus) + "RUB");
     }
 }
